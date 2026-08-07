@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>NIS2 Gap Assessment Report</title>
+  <style>
+    @page { size: A4; margin: 2cm; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 11pt;
+      line-height: 1.55;
+      color: #1a1a1a;
+      max-width: 100%;
+    }
+    h1 { font-size: 22pt; color: #111; border-bottom: 3px solid #c9a227; padding-bottom: 10px; margin-bottom: 8px; }
+    h2 { font-size: 14pt; color: #333; margin-top: 28pt; margin-bottom: 10pt; page-break-after: avoid; }
+    h3 { font-size: 12pt; color: #444; margin-top: 16pt; margin-bottom: 6pt; }
+    .cover { text-align: center; padding-top: 180px; }
+    .cover h1 { border: none; font-size: 26pt; margin-bottom: 24px; }
+    .cover-meta { font-size: 12pt; color: #555; margin: 8px 0; }
+    .disclaimer {
+      font-size: 9.5pt; color: #444;
+      border: 1px solid #bbb; padding: 14px;
+      margin: 24px 0; background: #fafafa;
+    }
+    .status-green { color: #2e7d32; font-weight: bold; }
+    .status-yellow { color: #f57f17; font-weight: bold; }
+    .status-red { color: #c62828; font-weight: bold; }
+    table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 10.5pt; }
+    th, td { border: 1px solid #ccc; padding: 8px 10px; text-align: left; vertical-align: top; }
+    th { background: #f0f0f0; font-weight: 600; }
+    .footer { position: fixed; bottom: 0; width: 100%; font-size: 8pt; color: #888; text-align: center; padding-bottom: 10px; }
+    .page-break { page-break-before: always; }
+    .summary-box { background: #f7f7f7; border-left: 4px solid #c9a227; padding: 16px; margin: 16px 0; }
+    .summary-box ul { margin: 8px 0 0 18px; }
+    .summary-box li { margin-bottom: 6px; }
+    .sig-table { width: 100%; margin-top: 60px; }
+    .sig-table td { border: none; border-bottom: 1px solid #333; height: 60px; vertical-align: bottom; padding-bottom: 4px; }
+    .sig-label { border: none; font-size: 9pt; color: #555; padding-top: 4px; }
+  </style>
+</head>
+<body>
+
+  <!-- SEITE 1: Deckblatt -->
+  <div class="cover">
+    <h1>NIS2 Gap Assessment Report</h1>
+    <div class="cover-meta"><strong>{{companyName}}</strong></div>
+    <div class="cover-meta">{{companyAddress}}</div>
+    <div class="cover-meta" style="margin-top: 40px;">Erstellt am: {{date}}</div>
+    <div class="cover-meta">Durchgeführt von: {{consultantName}}</div>
+    <div class="cover-meta" style="margin-top: 60px; font-size: 10pt; color: #777;">
+      Vertraulich — Nur für den internen Gebrauch des Auftraggebers
+    </div>
+  </div>
+
+  <!-- SEITE 2: Executive Summary -->
+  <div class="page-break">
+    <h2>Executive Summary</h2>
+    <div class="summary-box">
+      <strong>Gesamtergebnis:</strong> {{totalGreen}} von 23 Pflichten erfüllt | {{totalYellow}} teilweise erfüllt | {{totalRed}} nicht erfüllt
+    </div>
+    <ul>
+      <li><strong>Kritischste Lücke:</strong> {{criticalGap}}</li>
+      <li><strong>Schnellster Win:</strong> {{quickWin}}</li>
+      <li><strong>Größtes Budget-Risiko:</strong> {{budgetRisk}}</li>
+    </ul>
+    
+    <h3>Methodik</h3>
+    <p>Dieses Assessment wurde anhand der Pflichten aus Art. 21 der Richtlinie (EU) 2022/2555 (NIS2) durchgeführt. Die Bewertung basiert auf einem strukturierten Interview, der Dokumentenprüfung und branchenüblichen Standards (BSI-Grundschutz, ISO/IEC 27001).</p>
+  </div>
+
+  <!-- SEITE 3: Disclaimer -->
+  <div class="page-break">
+    <h2>Rechtlicher Hinweis</h2>
+    <div class="disclaimer">
+      <strong>Hilfestellung zur Selbstbewertung gemäß NIS2</strong><br><br>
+      Dieses Dokument stellt eine <strong>Hilfestellung zur Selbstbewertung</strong> gemäß der Richtlinie (EU) 2022/2555 (NIS2) dar.
+      Es ersetzt <strong>keine Rechtsberatung</strong>. Rechtsverbindliche Auskünfte erteilt ausschließlich ein zugelassener Rechtsanwalt.
+      Die Empfehlungen erfolgen nach bestem Wissen und Gewissen auf Basis branchenüblicher Standards (BSI-Grundschutz, ISO/IEC 27001).
+      Eine Haftung für die Richtigkeit, Vollständigkeit oder Aktualität der Inhalte ist ausgeschlossen.
+    </div>
+  </div>
+
+  <!-- SEITEN 4-10: Pflichten (Template pro Pflicht) -->
+  {{#each obligations}}
+  <div class="page-break">
+    <h2>Pflicht {{number}}: {{title}}</h2>
+    <table>
+      <tr><th>Rechtsgrundlage</th><td>{{legalBasis}}</td></tr>
+      <tr><th>Status</th><td class="status-{{status}}">{{statusLabel}}</td></tr>
+      <tr><th>BSI-Referenz</th><td>{{bsiReference}}</td></tr>
+      <tr><th>Evidenz</th><td>{{evidence}}</td></tr>
+      <tr><th>Lückenbeschreibung</th><td>{{gapDescription}}</td></tr>
+      <tr><th>Risiko-Einschätzung</th><td>{{riskLevel}}</td></tr>
+    </table>
+  </div>
+  {{/each}}
+
+  <!-- SEITEN 11-13: Maßnahmen-Roadmap -->
+  <div class="page-break">
+    <h2>Maßnahmen-Roadmap</h2>
+    <table>
+      <tr>
+        <th>Priorität</th>
+        <th>Maßnahme</th>
+        <th>Verantwortlich</th>
+        <th>Aufwand</th>
+        <th>Geschätzte Kosten</th>
+        <th>Bezug zu Pflicht</th>
+      </tr>
+      {{#each actions}}
+      <tr>
+        <td>{{priority}}</td>
+        <td>{{title}}</td>
+        <td>{{owner}}</td>
+        <td>{{effort}}</td>
+        <td>{{cost}}</td>
+        <td>{{obligationRef}}</td>
+      </tr>
+      {{/each}}
+    </table>
+  </div>
+
+  <!-- SEITE 14: Nächste Schritte -->
+  <div class="page-break">
+    <h2>Nächste Schritte & Follow-Up</h2>
+    <p>Wir empfehlen die Umsetzung der als "P0" priorisierten Maßnahmen innerhalb von 30 Tagen.</p>
+    <p><strong>Optional:</strong> NIS2 Quarterly Care — quartalsweise Aktualisierung Ihres Compliance-Status inkl. aktualisiertem Report für €1.200/Quartal.</p>
+    <p style="margin-top: 40px;">
+      <strong>Kontakt:</strong><br>
+      {{consultantName}}<br>
+      {{consultantEmail}}<br>
+      {{consultantPhone}}
+    </p>
+  </div>
+
+  <!-- SEITE 15: Unterschriftenblock -->
+  <div class="page-break">
+    <h2>Bestätigung</h2>
+    <p>Wir bestätigen den Erhalt und die Kenntnisnahme dieses Reports.</p>
+    <table class="sig-table">
+      <tr>
+        <td style="width: 45%;"></td>
+        <td style="width: 10%;"></td>
+        <td style="width: 45%;"></td>
+      </tr>
+      <tr>
+        <td class="sig-label">Ort, Datum, Unterschrift Auftraggeber</td>
+        <td class="sig-label"></td>
+        <td class="sig-label">Ort, Datum, Unterschrift Berater</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="footer">NIS2 Gap Assessment Report — {{companyName}} — {{date}} — Seite <span class="pageNumber"></span></div>
+</body>
+</html>
