@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NIS2-Readiness in 4 Stunden — ohne Big4-Kosten</title>
+  <meta name="description" content="Systematische NIS2-Lückenanalyse für den deutschen Mittelstand. Festpreis €2.900. Server-Standort Deutschland.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">NIS2<span class="accent">Sprint</span></div>
+      <nav>
+        <a href="#angebot">Angebot</a>
+        <a href="#faq">FAQ</a>
+        <a href="imprint.html">Impressum</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>NIS2-Readiness in 4 Stunden — <span class="accent">ohne Big4-Kosten</span></h1>
+      <p class="subhead">Systematische Lückenanalyse für den deutschen Mittelstand. Festpreis €2.900.</p>
+      <div class="trust-signals">
+        <span>🇩🇪 Server-Standort Deutschland</span>
+        <span>🛡️ 20 Jahre SOC-Erfahrung</span>
+        <span>📍 Ruhrgebiet & NRW</span>
+      </div>
+      <a href="#" class="cta-button" onclick="openCalendly(event)">Termin vereinbaren</a>
+      <p class="cta-sub">Kostenloses Erstgespräch bei unsicherem Bedarf</p>
+    </div>
+  </section>
+
+  <section class="problem" id="angebot">
+    <div class="container">
+      <h2>Die NIS2-Verpflichtung gilt ab Oktober 2024</h2>
+      <p>Viele Mittelständler wissen nicht, wo sie anfangen sollen. Big4-Berater verlangen €15.000+. <strong>Wir nicht.</strong></p>
+    </div>
+  </section>
+
+  <section class="offer">
+    <div class="container">
+      <h2>Das 4-Stunden-Gap-Assessment</h2>
+      <ol class="steps">
+        <li><strong>Vorbereitung</strong> via Fragebogen (15 Min)</li>
+        <li><strong>90-minütiges</strong> Remote-Interview mit Ihrem IT-Leiter</li>
+        <li><strong>90-minütige</strong> Dokumentenreview (Policies, Verträge, Prozesse)</li>
+        <li><strong>15-seitiger PDF-Report</strong> mit Ampel-Bewertung aller 23 Pflichten</li>
+        <li><strong>Priorisierter Maßnahmenplan</strong> mit Kostenschätzung</li>
+      </ol>
+      <div class="price-box">
+        <div class="price">€2.900 <span class="vat">zzgl. MwSt.</span></div>
+        <p>Inklusive: Report, Maßnahmenplan, 30-minütigem Follow-Up nach 4 Wochen</p>
+        <a href="#" class="cta-button secondary" onclick="openCalendly(event)">Jetzt Termin buchen</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="container">
+      <h2>Häufige Fragen</h2>
+      <details>
+        <summary>Für wen ist das Assessment gedacht?</summary>
+        <p>Unternehmen mit 50+ Mitarbeitern in KRITIS-relevanten Sektoren (Energie, Verkehr, Gesundheit, Finanzen, Digital).</p>
+      </details>
+      <details>
+        <summary>Was ist der Unterschied zu einem ISO-27001-Audit?</summary>
+        <p>Das Assessment prüft ausschließlich NIS2-Spezifika. Es ersetzt kein ISMS, deckt aber Überschneidungen auf.</p>
+      </details>
+      <details>
+        <summary>Ist das eine Rechtsberatung?</summary>
+        <p>Nein. Dies ist eine <strong>Hilfestellung</strong> zur Selbstbewertung gemäß NIS2. Rechtsverbindliche Auskünfte erteilt ein IT-Rechtsanwalt.</p>
+      </details>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p><a href="imprint.html">Impressum</a> | <a href="privacy.html">Datenschutz</a> | <a href="#">Disclaimer</a></p>
+      <p class="small">© 2026 NIS2Sprint UG — Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+
+  <!-- Calendly Embed -->
+  <div id="calendly-overlay" class="overlay" style="display:none;">
+    <div class="overlay-content">
+      <button class="close-btn" onclick="closeCalendly()">×</button>
+      <div id="calendly-inline-widget" style="min-width:320px;height:700px;"></div>
+    </div>
+  </div>
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <script>
+    function openCalendly(e) {
+      if(e) e.preventDefault();
+      document.getElementById('calendly-overlay').style.display = 'flex';
+      Calendly.initInlineWidget({
+        url: 'https://calendly.com/IHR_USERNAME/nis2-gap-assessment',
+        parentElement: document.getElementById('calendly-inline-widget')
+      });
+    }
+    function closeCalendly() {
+      document.getElementById('calendly-overlay').style.display = 'none';
+      document.getElementById('calendly-inline-widget').innerHTML = '';
+    }
+  </script>
+</body>
+</html>
