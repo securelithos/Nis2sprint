@@ -1,1 +1,291 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Postural Resonance Prototype</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #start-screen {
+            text-align: center;
+            padding: 2rem;
+            max-width: 400px;
+        }
+        
+        #start-screen h1 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            color: #a0a0a0;
+        }
+        
+        #start-screen p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: #808080;
+        }
+        
+        #start-button {
+            background: #2a2a2a;
+            border: 1px solid #404040;
+            color: #e0e0e0;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        #start-button:hover {
+            background: #3a3a3a;
+            border-color: #505050;
+        }
+        
+        #resonance-screen {
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        
+        #visual-core {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(100, 120, 140, 0.3) 0%, transparent 70%);
+            transition: all 0.5s ease;
+        }
+        
+        #info-panel {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            font-size: 0.8rem;
+            color: #606060;
+            max-width: 300px;
+        }
+        
+        #state-indicator {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-size: 0.7rem;
+            color: #505050;
+            text-align: right;
+        }
+        
+        .data-line {
+            margin: 0.3rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="start-screen">
+        <h1>Postural Resonance</h1>
+        <p>
+            Dieses Experiment nutzt Bewegungssensoren und erzeugt räumlichen Klang basierend auf der Haltung deines Geräts.
+            <br><br>
+            Deine Daten verbleiben ausschließlich auf diesem Gerät.
+        </p>
+        <button id="start-button">Beginnen</button>
+    </div>
+    
+    <div id="resonance-screen">
+        <div id="visual-core"></div>
+        <div id="state-indicator">
+            <div class="data-line">State: <span id="posture-state">detecting...</span></div>
+            <div class="data-line">Beta: <span id="beta-val">0</span>°</div>
+            <div class="data-line">Gamma: <span id="gamma-val">0</span>°</div>
+            <div class="data-line">Audio: <span id="audio-state">inactive</span></div>
+        </div>
+        <div id="info-panel">
+            Bewege dein Gerät oder nutze die Maus (Desktop-Fallback).
+            <br>
+            Der Klang reagiert auf die Neigung.
+        </div>
+    </div>
 
+    <script>
+        // State
+        let audioContext = null;
+        let oscillator = null;
+        let gainNode = null;
+        let isRunning = false;
+        let currentPosture = 'unknown';
+        let beta = 0;
+        let gamma = 0;
+        
+        // DOM Elements
+        const startScreen = document.getElementById('start-screen');
+        const resonanceScreen = document.getElementById('resonance-screen');
+        const startButton = document.getElementById('start-button');
+        const visualCore = document.getElementById('visual-core');
+        const postureState = document.getElementById('posture-state');
+        const betaVal = document.getElementById('beta-val');
+        const gammaVal = document.getElementById('gamma-val');
+        const audioState = document.getElementById('audio-state');
+        
+        // Start
+        startButton.addEventListener('click', async () => {
+            startScreen.style.display = 'none';
+            resonanceScreen.style.display = 'block';
+            
+            await initAudio();
+            await initSensors();
+        });
+        
+        // Audio Setup
+        async function initAudio() {
+            audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            oscillator = audioContext.createOscillator();
+            gainNode = audioContext.createGain();
+            
+            oscillator.type = 'sine';
+            oscillator.frequency.value = 110; // A2 - tiefer, beruhigender Ton
+            
+            gainNode.gain.value = 0; // Startet stumm
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            oscillator.start();
+            
+            audioState.textContent = 'active';
+        }
+        
+        // Sensor Setup
+        async function initSensors() {
+            // Check if DeviceOrientation is available
+            if (typeof DeviceOrientationEvent !== 'undefined' && 
+                typeof DeviceOrientationEvent.requestPermission === 'function') {
+                // iOS 13+ requires permission
+                try {
+                    const permission = await DeviceOrientationEvent.requestPermission();
+                    if (permission === 'granted') {
+                        window.addEventListener('deviceorientation', handleOrientation);
+                        console.log('DeviceOrientation permission granted');
+                    } else {
+                        console.log('DeviceOrientation permission denied, using mouse fallback');
+                        initMouseFallback();
+                    }
+                } catch (error) {
+                    console.error('Permission error:', error);
+                    initMouseFallback();
+                }
+            } else if ('DeviceOrientationEvent' in window) {
+                // Android and older iOS
+                window.addEventListener('deviceorientation', handleOrientation);
+                console.log('DeviceOrientation available (no permission needed)');
+            } else {
+                // Desktop fallback
+                initMouseFallback();
+                console.log('DeviceOrientation not available, using mouse fallback');
+            }
+        }
+        
+        // Mouse Fallback for Desktop
+        function initMouseFallback() {
+            document.addEventListener('mousemove', (e) => {
+                const centerX = window.innerWidth / 2;
+                const centerY = window.innerHeight / 2;
+                
+                // Map mouse position to fake beta/gamma (-90 to 90)
+                gamma = ((e.clientX - centerX) / centerX) * 45;
+                beta = ((e.clientY - centerY) / centerY) * 45;
+                
+                updateResonance();
+            });
+        }
+        
+        // Handle Device Orientation
+        function handleOrientation(event) {
+            beta = event.beta || 0;   // Front-back tilt (-180 to 180)
+            gamma = event.gamma || 0; // Left-right tilt (-90 to 90)
+            
+            updateResonance();
+        }
+        
+        // Update Visual and Audio
+        function updateResonance() {
+            // Determine posture state
+            const absBeta = Math.abs(beta);
+            
+            if (absBeta < 20) {
+                currentPosture = 'seated';
+            } else if (absBeta > 70) {
+                currentPosture = 'recumbent';
+            } else {
+                currentPosture = 'transitional';
+            }
+            
+            // Update UI
+            postureState.textContent = currentPosture;
+            betaVal.textContent = Math.round(beta);
+            gammaVal.textContent = Math.round(gamma);
+            
+            // Visual feedback
+            const intensity = Math.abs(gamma) / 90; // 0 to 1
+            const hue = 200 + (gamma * 0.5); // Blue shift based on gamma
+            const size = 200 + (intensity * 50);
+            
+            visualCore.style.background = `radial-gradient(circle, 
+                hsla(${hue}, 30%, 50%, ${0.2 + intensity * 0.3}) 0%, 
+                transparent 70%)`;
+            visualCore.style.width = `${size}px`;
+            visualCore.style.height = `${size}px`;
+            
+            // Audio feedback
+            if (oscillator && gainNode) {
+                // Frequency modulation based on beta (pitch)
+                const freqMod = 110 + (beta * 0.5); // 110 Hz base, ±45 Hz range
+                oscillator.frequency.setTargetAtTime(freqMod, audioContext.currentTime, 0.1);
+                
+                // Gain modulation based on posture (volume)
+                let targetGain = 0;
+                if (currentPosture === 'recumbent') {
+                    targetGain = 0.15; // Fuller, warmer
+                } else if (currentPosture === 'seated') {
+                    targetGain = 0.1; // Clearer, direct
+                } else {
+                    targetGain = 0.05; // Subtle
+                }
+                
+                gainNode.gain.setTargetAtTime(targetGain, audioContext.currentTime, 0.3);
+            }
+        }
+        
+        // Cleanup on page unload
+        window.addEventListener('beforeunload', () => {
+            if (oscillator) {
+                oscillator.stop();
+            }
+            if (audioContext) {
+                audioContext.close();
+            }
+        });
+    </script>
+</body>
+</html>
