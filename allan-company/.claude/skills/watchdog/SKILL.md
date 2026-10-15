@@ -19,3 +19,9 @@ Stop relying on Allan to find the blockers. Insight is not enough: every finding
 
 ## Output (level-5 format, short)
 For each finding: what · why it matters · what I already did (green/yellow actions: Option holds, Gmail drafts, board updates) · what needs Allan's yes. Most important first, at most 7 items. Log new friction in `private/friction-log.md`.
+
+## Triage like a SOC (adopted 15.10 from a cybersecurity career-ladder graphic)
+- Give every finding a **severity** (high / medium / low) and the **evidence** (source mail, calendar entry, file). Escalate with a clear note, not a hunch.
+- **Repeat rule:** when the same finding appears twice, propose a permanent check or rule (turn repeated alerts into stronger detections) and add it to this file after Allan agrees.
+- **Evidence over speed:** write the action log line before reporting.
+

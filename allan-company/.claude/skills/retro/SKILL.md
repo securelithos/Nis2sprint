@@ -13,3 +13,7 @@ description: Weekly team retrospective for Allan Company. Use when Allan says /r
    - **Proactivity:** examples of each role acting at level 3-5 this week, and one place it should have.
    - **Proposals:** at most three process changes (new trigger, scheduled routine, charter change, permission change), each with trade-off and plan B.
 3. Allan approves, changes or rejects each proposal. Apply the approved ones to CLAUDE.md, the agent files or `roadmap.md`, and log them in `private/decisions.md`.
+
+## Promotion review (autonomy follows track record)
+Once a month, per agent: count corrections by Allan, wrong facts, missed items and actions that needed an undo. Zero or very few over four weeks: propose moving one action from yellow to green (or red to yellow). Repeated errors: propose tightening. Allan decides; log it in `private/decisions.md`.
+
