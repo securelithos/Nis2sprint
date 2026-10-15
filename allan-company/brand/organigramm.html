@@ -1,0 +1,255 @@
+<title>Allan Company Organigramm</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Jost:wght@300;400;500&display=swap">
+<style>
+/* Layout: ruhiges Magazin-Blatt. Kopf, Spitze (Allan, Adolfo), dann sieben Ressorts im Raster. */
+:root {
+  --paper: #F8FAFC;
+  --surface: #FFFFFF;
+  --ink: #15202F;
+  --muted: #5B6B80;
+  --line: #D5DEE9;
+  --blue: #35557F;
+  --mist: #E8EEF6;
+  --rose: #B8766B;
+  --display: "Jost", "Futura", "Century Gothic", sans-serif;
+  --body: "Albert Sans", "Helvetica Neue", Arial, sans-serif;
+  --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0F1722; --surface: #152031; --ink: #E8EEF6; --muted: #93A3B8;
+    --line: #26364C; --blue: #8FB0DA; --mist: #1A2A40; --rose: #D99A8E;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0F1722; --surface: #152031; --ink: #E8EEF6; --muted: #93A3B8;
+  --line: #26364C; --blue: #8FB0DA; --mist: #1A2A40; --rose: #D99A8E;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 300;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 40px 64px;
+  background-image: radial-gradient(ellipse 80% 360px at 50% 0, var(--mist), transparent);
+  background-repeat: no-repeat;
+}
+.sheet { max-width: 1120px; margin: 0 auto; }
+
+.masthead { text-align: center; padding-bottom: 28px; border-bottom: 1px solid var(--line); }
+.eyebrow {
+  font-family: var(--display); font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--muted); font-weight: 400; margin: 0 0 14px;
+}
+h1 {
+  font-family: var(--display); font-weight: 300; font-size: clamp(30px, 6vw, 54px);
+  letter-spacing: 0.16em; text-transform: uppercase; margin: 0; text-wrap: balance; line-height: 1.15;
+}
+.deck {
+  font-family: var(--serif); font-style: italic; font-size: clamp(18px, 2.4vw, 22px);
+  color: var(--blue); margin: 14px 0 0; text-wrap: balance;
+}
+
+.top { display: flex; flex-direction: column; align-items: center; padding-top: 36px; }
+.stem { width: 1px; height: 28px; background: var(--line); }
+.bar { width: min(100%, 880px); height: 1px; background: var(--line); margin-top: 0; }
+
+.card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 2px;
+  padding: 16px 18px; min-width: 0;
+}
+.card.ceo { text-align: center; padding: 22px 40px; border-color: var(--rose); }
+.card.lead { text-align: center; padding: 18px 32px; border-color: var(--blue); }
+.role {
+  font-family: var(--display); font-size: 10.5px; letter-spacing: 0.26em; text-transform: uppercase;
+  color: var(--muted); font-weight: 400; margin: 0 0 4px;
+}
+.ceo .role { color: var(--rose); }
+.name { font-family: var(--display); font-weight: 400; font-size: 22px; letter-spacing: 0.04em; margin: 0; line-height: 1.2; }
+.ceo .name { font-size: 28px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 300; }
+.note { font-family: var(--serif); font-style: italic; font-size: 17px; color: var(--muted); margin: 6px 0 0; line-height: 1.35; }
+.tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.center .tags { justify-content: center; }
+.tag {
+  font-family: var(--display); font-size: 9.5px; letter-spacing: 0.18em; text-transform: uppercase;
+  border: 1px solid var(--line); color: var(--muted); padding: 2px 7px; border-radius: 1px; font-weight: 400;
+}
+.tag.model { color: var(--blue); border-color: var(--blue); }
+
+.depts {
+  margin-top: 0; display: grid; gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+}
+.dept { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.dept-head {
+  font-family: var(--display); font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--blue); font-weight: 500; padding: 14px 0 8px; border-top: 1px solid var(--blue); margin: 0;
+}
+.planned { border-style: dashed; background: transparent; }
+.planned .name { color: var(--muted); }
+.members { display: flex; flex-direction: column; gap: 10px; }
+.members .card { padding: 12px 16px; }
+.members .name { font-size: 18px; }
+.members .note { font-size: 16px; }
+
+.legend {
+  margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line);
+  display: flex; gap: 28px; flex-wrap: wrap; justify-content: center;
+  font-family: var(--display); font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted);
+}
+.legend span { display: inline-flex; align-items: center; gap: 10px; }
+.swatch { width: 26px; height: 14px; border: 1px solid var(--blue); background: var(--surface); }
+.swatch.dash { border-style: dashed; border-color: var(--muted); background: transparent; }
+.swatch.ceo { border-color: var(--rose); }
+.foot { text-align: center; margin: 22px 0 0; font-family: var(--serif); font-style: italic; color: var(--muted); font-size: 16px; }
+
+@media (max-width: 520px) {
+  .card.ceo { padding: 20px 24px; }
+  .card.lead { padding: 16px 20px; }
+}
+</style>
+
+<div class="sheet">
+  <header class="masthead">
+    <p class="eyebrow">Gazzetta della Company · Stand 15. Oktober 2026</p>
+    <h1>Allan Company</h1>
+    <p class="deck">Ein Haus, eine Handschrift. Wer wofür zuständig ist, und was noch entsteht.</p>
+  </header>
+
+  <section class="top center" aria-label="Spitze">
+    <article class="card ceo">
+      <p class="role">Chief Executive Officer</p>
+      <h2 class="name">Allan</h2>
+      <p class="note">Entscheidet. Alles Rote braucht sein Ja.</p>
+    </article>
+    <div class="stem"></div>
+    <article class="card lead">
+      <p class="role">Concierge · Chief of Staff</p>
+      <h2 class="name">Adolfo</h2>
+      <p class="note">Verteilt, bündelt, bringt eine Freigabe-Liste.</p>
+      <div class="tags"><span class="tag model">Modell nach Wahl</span><span class="tag">Hauptsitzung</span></div>
+    </article>
+    <div class="stem"></div>
+    <div class="bar"></div>
+  </section>
+
+  <section class="depts" aria-label="Ressorts">
+    <div class="dept">
+      <h3 class="dept-head">Gesundheit</h3>
+      <div class="members">
+        <article class="card">
+          <p class="role">Chief Health Officer</p>
+          <h4 class="name">Josef</h4>
+          <p class="note">Training, Ernährung, Schlaf, Supplements.</p>
+          <div class="tags"><span class="tag model">Sonnet</span><span class="tag">Agent</span></div>
+        </article>
+        <article class="card">
+          <p class="role">Wellbeing Officer</p>
+          <h4 class="name">Wellbeing Coach</h4>
+          <p class="note">Check-ins, Stress, Fokus. Bietet an, verordnet nicht.</p>
+          <div class="tags"><span class="tag model">Sonnet</span><span class="tag">Agent</span></div>
+        </article>
+      </div>
+    </div>
+
+    <div class="dept">
+      <h3 class="dept-head">Karriere</h3>
+      <div class="members">
+        <article class="card">
+          <p class="role">Career Officer</p>
+          <h4 class="name">Career Coach</h4>
+          <p class="note">Bewerbungen, Interviews, Weg zum Ziel. Entwürfe nur mit Freigabe.</p>
+          <div class="tags"><span class="tag model">Opus</span><span class="tag">Agent</span></div>
+        </article>
+      </div>
+    </div>
+
+    <div class="dept">
+      <h3 class="dept-head">Allan University</h3>
+      <div class="members">
+        <article class="card lead" style="text-align:left">
+          <p class="role">Chief Learning Officer · Dekan</p>
+          <h4 class="name">Mao</h4>
+          <p class="note">Baut Kurse, entscheidet über Bestehen.</p>
+          <div class="tags"><span class="tag">Skills Advisor · Tutor</span></div>
+        </article>
+        <article class="card"><p class="role">Bibliothek</p><h4 class="name">Librarian</h4><div class="tags"><span class="tag model">Sonnet</span><span class="tag">Agent</span></div></article>
+        <article class="card"><p class="role">Redaktion der Gedanken</p><h4 class="name">Critic</h4><div class="tags"><span class="tag model">Sonnet</span><span class="tag">Agent</span></div></article>
+        <article class="card"><p class="role">Fremde Blickwinkel</p><h4 class="name">Roommate</h4><div class="tags"><span class="tag model">Sonnet</span><span class="tag">Agent</span></div></article>
+      </div>
+    </div>
+
+    <div class="dept">
+      <h3 class="dept-head">Wissen &amp; Redaktion</h3>
+      <div class="members">
+        <article class="card">
+          <p class="role">Editor · CIO</p>
+          <h4 class="name">Editor</h4>
+          <p class="note">Morgenbrief, Märkte, IT-Security, Essen. Recherchen auf Wunsch.</p>
+          <div class="tags"><span class="tag model">Sonnet</span><span class="tag">Agent</span></div>
+        </article>
+      </div>
+    </div>
+
+    <div class="dept">
+      <h3 class="dept-head">Ideen</h3>
+      <div class="members">
+        <article class="card">
+          <p class="role">Chief Dreaming Officer</p>
+          <h4 class="name">Kanye</h4>
+          <p class="note">Idea Lab: einfangen, prüfen, günstig testen. Allan entscheidet.</p>
+          <div class="tags"><span class="tag">Rolle im Idea Lab</span></div>
+        </article>
+      </div>
+    </div>
+
+    <div class="dept">
+      <h3 class="dept-head">Betrieb</h3>
+      <div class="members">
+        <article class="card">
+          <p class="role">Operations</p>
+          <h4 class="name">Personal Assistant</h4>
+          <p class="note">Mail, Kalender, Termine. Als Einziger an Mail und Kalender.</p>
+          <div class="tags"><span class="tag model">Haiku</span><span class="tag">Agent</span></div>
+        </article>
+        <article class="card">
+          <p class="role">Watchdog</p>
+          <h4 class="name">Kimbo</h4>
+          <p class="note">Findet Lücken, Konflikte und Fälliges, bevor Allan es tut.</p>
+          <div class="tags"><span class="tag">Skill /watchdog</span></div>
+        </article>
+        <article class="card planned">
+          <p class="role">Finanzen · geplant</p>
+          <h4 class="name">CFO</h4>
+          <p class="note">Eigene Finanzen, VC-Anteil, Haushaltsplan.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="dept">
+      <h3 class="dept-head">Marke, Design &amp; Medien</h3>
+      <div class="members">
+        <article class="card planned">
+          <p class="role">Creative Direction · geplant</p>
+          <h4 class="name">Marketing &amp; Design</h4>
+          <p class="note">Designsprache, Slides, Visitenkarte, Bild und Medien. Maßstab: eine erstklassige Agentur.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="legend" role="list">
+    <span role="listitem"><i class="swatch ceo"></i>CEO</span>
+    <span role="listitem"><i class="swatch"></i>Aktiv</span>
+    <span role="listitem"><i class="swatch dash"></i>Geplant</span>
+  </div>
+  <p class="foot">Aktionsgrenzen: Grün tun und melden, Gelb tun und melden (freigegeben), Rot erst fragen.</p>
+</div>
