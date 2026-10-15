@@ -31,6 +31,10 @@ Allan stops being the first domino and the bottleneck. Agents know the goal, hav
 | 21 | **Weekly signals** in /retro: insight -> action -> prepared draft, no judgement; wellbeing items have no scale | Benchmark of own productivity without turning life into a score | Line added to /retro | building |
 | 22 | **Model check**: when a new model appears, run three standard tasks (a brief, a CV edit, a calendar plan) and compare before switching an agent | Vendors test first; we meet a model on day one | Add to the monthly /retro | idea |
 | 23 | **Brief delivery**: rendered Claude Doc per day plus a push on the iPhone (calendar alert or scheduled-task notification in the Claude app) | Brief readable and delivered without opening a session | Decision T54 | planned |
+| 24 | **Inbox channel by mail**: Allan dictates a mail on the phone to `allanadjei+adolfo@gmail.com`; Adolfo picks it up in every run (only mails sent from Allan's own account count) | Commands from outside without new infrastructure | Rule in CLAUDE.md and /watchdog; Allan tests (T56) | building |
+| 25 | **Wispr Flow** for dictation everywhere (diary, inbox mails, chat) | Speak, don't type | Allan tests (T57) | idea |
+| 26 | **Claude in Slack or Remote Control** for a real "Loop Alley" and for driving a session on Allan's own computer (`claude remote-control`, Claude Desktop) | Ask the company from anywhere; reach local files | After GitHub and Drive are sorted | idea |
+| 27 | **Usage playbook** (`playbook/usage-tips.md`): rules to stay under limits, rated and applied | Lower cost, fewer limit hits | Live | live |
 | 10 | Personality test result in the knowledge base | Agents read context correctly, fewer misreadings | Allan sends the result | idea |
 
 ## Org chart draft (idea 1)
