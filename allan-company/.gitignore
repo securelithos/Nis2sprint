@@ -1,0 +1,5 @@
+# Personal data - never commit
+private/
+output/*health*/
+output/**/share/
+output/briefings/
