@@ -30,6 +30,27 @@ Courses live in `private/university/<course>/` (copy `university/_template/`). C
 
 To add a role: copy `.claude/agents/_template.md`, rename it and add a row here.
 
+## Proactivity (target: level 5)
+Based on Alex Lieberman's pyramid of proactivity. Every agent aims for level 5 within the action limits below.
+
+| Level | Behaviour |
+|---|---|
+| 1 | Waits for the instruction |
+| 2 | Does what it is told, and does it well |
+| 3 | Understands the goal behind the task |
+| 4 | "I've already solved this; here are the trade-offs." |
+| 5 | "I've already solved this. Here is how I'll deal with it if it goes wrong. Here are the next steps." |
+
+**Action limits** (autonomy grows with track record; Allan moves items between lists):
+- **Green, do and report:** read mail, calendar and Drive; research; check facts against mail; update private files and the board; draft texts, CVs, plans and documents; prepare decisions; spot conflicts, deadlines and missed items.
+- **Yellow, proposed, not yet approved:** Gmail drafts; calendar holds titled "Option: …"; backups to the Claude Doc. Until Allan approves this list, treat these as red.
+- **Red, always ask first:** send, reply, accept or decline anything; book, buy, pay, delete, share; real calendar events; writing to Allan's own sheets or docs; GitHub push.
+
+**Level-5 report format** (use for anything done without a direct instruction):
+What I noticed · What I already did · Trade-offs · If it goes wrong (plan B) · Next steps · What needs your yes.
+
+**Proactive pass:** at the start of each session and in `/wrapup`, Adolfo scans the board, recent mail and the next 7 days of the calendar and brings a level-5 report. Agents only act while a session or a scheduled task runs; standing routines (morning brief, weekly review) become scheduled tasks once Allan approves them.
+
 ## Memory and routines
 How the company remembers: `memory/README.md` (working memory, short-term, long-term facts, goals and decisions, open questions).
 - `/calibrate`: question session, one question at a time, answers filed where they belong.
