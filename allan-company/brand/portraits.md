@@ -32,5 +32,16 @@ Eigenschaften: Schwarzer Arzt-Typ, Mitte/Ende dreißig, gesund und strahlend, Mi
 Prompt:
 Editorial portrait photograph of Josef, a Black man in his late thirties, a luxury-clinic surgeon with an effortless, quietly self-assured presence, radiant healthy skin, immaculate short hair and trimmed beard, direct unhurried gaze, the faintest confident smile. Impeccably tailored charcoal suit, white open-collar shirt, plain dark-dial wrist watch, no logos, an understated air of wealth. [Haus-Stil] --ar 1:1
 
+## Kanye, Chief Dreaming Officer (Idea Lab)
+Eigenschaften: Mitte zwanzig, jung, wild, kreativ, erfinderisch, experimentierfreudig; muss trotzdem in die Preppy-Gruppe passen. Ein unerwartetes Detail statt Chaos. Vorschlag: britisch-indische Herkunft (schließt eine Lücke im Team), Erkennungsmerkmal: Messinglupe oder Zirkel um den Hals, Bleistift hinter dem Ohr.
+Prompt:
+Editorial portrait photograph of Kanye, a British-Indian inventor-designer in his mid-twenties, bright restless eyes, tousled dark wavy hair, a cheeky half-smile, lean build. Impeccably cut deep-blue velvet blazer worn over a white shirt with no tie, a brass drafting compass on a thin chain, a pencil behind his ear, one unexpected detail such as a single bold silver ring. [Haus-Stil] --ar 1:1
+
+## Hintergrund-Regel
+Das kühle Blaugrau mit Fensterlicht und Vorhang bleibt bei allen gleich (Wiedererkennung). Mao und Josef dürfen davor oder in einem Holz- und Ledersessel-Raum stehen, solange Licht und Blauton gleich bleiben.
+
+## Ideen für spätere Rollen
+Altersmix: mindestens eine Person ab fünfzig (zum Beispiel Career Officer oder Editor), als Gegengewicht zu den jüngeren.
+
 ## Noch offen
 Kanye (Idea Lab), Wellbeing, Career, Editor, CFO, Marke & Design, Librarian, Critic, Roommate.
