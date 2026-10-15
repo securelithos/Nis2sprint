@@ -37,7 +37,7 @@ Right model per agent, set in each agent file (`model:`):
 - **Sonnet** (default): research and writing: `editor`, `health-coach` (Josef), `wellbeing-coach`, `librarian`, `critic`, `roommate`; new roles start here.
 - **Opus** (heavy work): `career-coach` (applications, CVs, negotiation, background-check wording: high stakes, long context).
 - The main session (Adolfo, advisor, tutor) runs on whatever model Allan picks with `/model` **at the start of a session**: Sonnet for daily operations, Opus for strategy, big imports and hard decisions. Avoid switching mid-session (the cache is lost and the whole context is reread); start a new session instead.
-- Sessions: one topic per session; end with `/wrapup`, then start fresh. The memory files make a new session cheap. Usage tips: `playbook/usage-tips.md`.
+- Sessions: one topic per session; end with `/wrapup`, then start fresh. The memory files make a new session cheap. Usage tips: `playbook/usage-tips.md`. How the stack works: `playbook/architecture.md`.
 - An agent that hits work above its level says so ("needs Opus: why") instead of guessing. Review the mapping monthly in `/retro` against cost and quality.
 
 ## Proactivity (target: level 5)
@@ -55,6 +55,8 @@ Based on Alex Lieberman's pyramid of proactivity. Every agent aims for level 5 w
 - **Green, do and report:** read mail, calendar and Drive; research; check facts against mail; update private files and the board; draft texts, CVs, plans and documents; prepare decisions; spot conflicts, deadlines and missed items.
 - **Yellow, do and report** (approved 2026-10-15): backups to the Claude Doc; Gmail drafts (never sent by us); calendar holds titled "Option: …".
 - **Red, always ask first:** send, reply, accept or decline anything; book, buy, pay, delete, share; real calendar events; writing to Allan's own sheets or docs; GitHub push.
+
+**Evidence:** every yellow or red action (calendar entries, Gmail drafts, sent items, backups, scheduled tasks, pushes) gets one line in `private/governance/action-log.md`: when, agent, what, why, approval.
 
 **Level-5 report format** (use for anything done without a direct instruction):
 What I noticed · What I already did · Trade-offs · If it goes wrong (plan B) · Next steps · What needs your yes.

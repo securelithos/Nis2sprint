@@ -37,6 +37,10 @@ Allan stops being the first domino and the bottleneck. Agents know the goal, hav
 | 27 | **Usage playbook** (`playbook/usage-tips.md`): rules to stay under limits, rated and applied | Lower cost, fewer limit hits | Live | live |
 | 28 | **Principles library**: books summarised in NotebookLM become decision filters (cards with source, limits, filter question, owner); first book: The Millionaire Next Door | Borrow proven beliefs as filters, not dogma | `private/principles/README.md` with 5 starter cards | building |
 | 29 | **Pre-briefing research** (Allie's "/last30days" style): before an event, interview or talk, scan what people say right now (Reddit, X, YouTube, Hacker News, GitHub, prediction markets) incl. comments and transcripts | Walk into a room (EY round 2, Sparkasse, MEDICA) knowing the current fears and debates | Review the skill's code before installing; check which sources this environment can reach | idea |
+| 30 | **Model-agnostic layer**: keep roles, rules and memory in plain files, tools behind MCP, add a router so a role can run on another provider | Knowledge stays Allan's; no lock-in | `playbook/architecture.md` | idea |
+| 31 | **Company memory database** (e.g. Postgres via Supabase) indexing mail, diary, decisions, applications, with search | "Make the whole company queryable" at scale | After Drive and GitHub; compare options first (T61) | idea |
+| 32 | **Local open model for sensitive data** (health, credit) | Privacy by design | Research with T61 | idea |
+| 33 | **Action log** (evidence capture) | A human can see what happened, intervene and defend the outcome | Live 15.10 | live |
 | 10 | Personality test result in the knowledge base | Agents read context correctly, fewer misreadings | Allan sends the result | idea |
 
 ## Org chart draft (idea 1)
