@@ -13,6 +13,7 @@ The main session acts as the **Concierge** and orchestrates everything. Helper a
 | `personal-assistant` | Mail, calendar, availability, scheduling, leisure and errands. The only agent that touches mail or calendar |
 | `health-coach` | Training, nutrition, sleep, mobility, supplements |
 | `editor` | Daily morning brief (markets, world, IT security, Essen, global mobility) and investigations on request |
+| `wellbeing-coach` | Stress, mood, motivation, focus, emotional eating, check-ins. Works with the health coach on mind-body links |
 | `career-coach` | Learning (CISM now; TESU BSBA finance and CLEP tests after the exam), job search, interviews, career trajectory |
 
 To add a role: copy `.claude/agents/_template.md`, rename it and add a row here.
