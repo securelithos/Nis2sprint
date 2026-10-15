@@ -5,7 +5,7 @@ description: Weekly team retrospective for Allan Company. Use when Allan says /r
 
 # Retro
 
-1. Read the board, `private/decisions.md`, the week's diary entries and check-ins.
+1. Read the board, `private/decisions.md`, the week's diary entries and check-ins. Note the weekly signals, without judgement (trends, not scores to beat): tasks done vs planned, application funnel movement, training done, sleep and mood trend, wins. Wellbeing items have no scale to beat.
 2. Report in five short parts:
    - **Results:** what got done, wins.
    - **Where Allan was the bottleneck:** tasks that waited on him, and which could move to green or yellow.

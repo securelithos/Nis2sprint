@@ -26,6 +26,11 @@ Allan stops being the first domino and the bottleneck. Agents know the goal, hav
 | 16 | **"Loop Alley" channel**: one place (Slack/Telegram) where Allan asks the workforce and gets an answer now | Fast answers without opening a session | With idea 6 | idea |
 | 17 | **Watchdog** (`/watchdog`): calendar conflicts, missing dates, unanswered mail, due follow-ups, cross-functional gap analysis (CV vs profile, imports vs Gmail, plan vs calendar, board vs goals); insight -> action -> prepared draft | "Dashboards are dumb": tell me what to do tomorrow and write the script | Skill live 15.10; first run found the CISM exam missing from the calendar and no study plan after 21.10 | live |
 | 18 | **Loop channel for family or helpers** (like Allie's team asking her AI): e.g. Lars or family ask "is Allan free Saturday?" with strict limits on what can be shared | Assistant behaviour like a real PA | Only after Telegram/Slack exists; define what is shareable first | idea |
+| 19 | **Build the factory, then the product** (Allie): the company's primitives are reusable: memory, approvals, watchdog, charters, routines, backup, ISMS-lite, retro, model mapping. Every new project starts from them | Each next thing ships faster; the measuring is the foundation layer | Keep primitives generic and documented | building |
+| 20 | **Idea Lab / startup accelerator** under the Chief Dreaming Officer: inbox -> screen -> scorecard -> cheap test -> Allan decides (go / park / kill). A scout role finds ideas on a schedule (friction log, diary, news, job-search patterns, conversations) | Hand the finding of ideas to the company; keep the billion-dollar option alive | `private/ideas/inbox.md` with pipeline and scorecard | building |
+| 21 | **Weekly signals** in /retro: insight -> action -> prepared draft, no judgement; wellbeing items have no scale | Benchmark of own productivity without turning life into a score | Line added to /retro | building |
+| 22 | **Model check**: when a new model appears, run three standard tasks (a brief, a CV edit, a calendar plan) and compare before switching an agent | Vendors test first; we meet a model on day one | Add to the monthly /retro | idea |
+| 23 | **Brief delivery**: rendered Claude Doc per day plus a push on the iPhone (calendar alert or scheduled-task notification in the Claude app) | Brief readable and delivered without opening a session | Decision T54 | planned |
 | 10 | Personality test result in the knowledge base | Agents read context correctly, fewer misreadings | Allan sends the result | idea |
 
 ## Org chart draft (idea 1)
@@ -36,7 +41,7 @@ Allan stops being the first domino and the bottleneck. Agents know the goal, hav
 - **Chief Wellbeing Officer**: wellbeing coach
 - **Chief Career Officer**: career coach (applications, interviews, career strategy)
 - **Chief Learning Officer / Dean: Mao**: Allan University (advisor, tutor, librarian, critic, roommate)
-- **Chief Financial Officer**: budget, credit repair, FIRE plan (to come with the finance import)
+- **Chief Financial Officer** (also owns the VC allocation of Allan's own capital): budget, credit repair, FIRE plan (to come with the finance import)
 - **Chief Information Officer / Editor**: morning brief, research
-- **Chief Dreaming Officer**: keeps the moonshots alive (UAE Director, EUR 500k, FIRE), connects today's tasks to them, questions small thinking
+- **Chief Dreaming Officer** (name to come): keeps the moonshots alive (UAE Director, EUR 500k, FIRE, startup), connects today's tasks to them, questions small thinking. Owns the Idea Lab (scout, analyst; more when needed)
 - **Operations**: personal assistant (mail, calendar, errands)
