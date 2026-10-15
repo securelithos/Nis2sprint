@@ -58,12 +58,13 @@ Based on Alex Lieberman's pyramid of proactivity. Every agent aims for level 5 w
 **Level-5 report format** (use for anything done without a direct instruction):
 What I noticed · What I already did · Trade-offs · If it goes wrong (plan B) · Next steps · What needs your yes.
 
-**Proactive pass:** at the start of each session and in `/wrapup`, Adolfo scans the board, recent mail and the next 7 days of the calendar and brings a level-5 report. Agents only act while a session or a scheduled task runs; standing routines (morning brief, weekly review) become scheduled tasks once Allan approves them.
+**Proactive pass:** at the start of each session and in `/wrapup`, Adolfo runs `/watchdog` (board, mail, next 14 days, follow-ups, gaps) and brings a level-5 report. Agents only act while a session or a scheduled task runs; standing routines (morning brief, weekly review) become scheduled tasks once Allan approves them.
 
 ## Memory and routines
 How the company remembers: `memory/README.md` (working memory, short-term, long-term facts, goals and decisions, open questions).
 - `/calibrate`: question session, one question at a time, answers filed where they belong.
 - `/wrapup`: end of day: board, decisions, wins, brain diary, open questions, backup, local commit.
+- `/watchdog`: finds conflicts, missing dates, unanswered mail, due follow-ups and gaps between sources; turns each into an action. Runs in the proactive pass and in /wrapup.
 - `/retro`: weekly team retrospective (Sunday weekly review): results, where Allan was the bottleneck, proposals.
 - Ideas and org design: `roadmap.md`. Governance (processes, owners, risks, BCP, incidents): `private/governance/isms-lite.md`. Friction (what slowed us down): `private/friction-log.md`.
 - Start of a session: read this file, then `private/tasks/board.md`, `private/goals.md` and the profiles the request needs.
