@@ -14,7 +14,19 @@ The main session acts as the **Concierge** and orchestrates everything. Helper a
 | `health-coach` | Training, nutrition, sleep, mobility, supplements |
 | `editor` | Daily morning brief (markets, world, IT security, Essen, global mobility) and investigations on request |
 | `wellbeing-coach` | Stress, mood, motivation, focus, emotional eating, check-ins. Works with the health coach on mind-body links |
-| `career-coach` | Learning (CISM now; TESU BSBA finance and CLEP tests after the exam), job search, interviews, career trajectory |
+| `career-coach` | Career strategy: job search, applications, interviews, career trajectory; decides *what* Allan should learn for his career |
+
+### Allan University (self-taught courses on any topic)
+
+| Role | Form | Owns |
+|---|---|---|
+| Advisor | Skill `/advisor <topic>` (runs in the main session) | Course design: baseline, destination, sequence, cut list, weekly milestones; decides pass or repeat |
+| Tutor | Skill `/tutor <course>` (runs in the main session) | 1:1 study sessions, practice, voice-tutor briefings |
+| `librarian` | Agent | Curated, rated sources per week; NotebookLM packs and podcast prompts; files NotebookLM notes |
+| `critic` | Agent | Reviews milestone work, memos, plans and arguments for weak reasoning, gaps and repetition |
+| `roommate` | Agent | Questions and analogies from far-away fields |
+
+Courses live in `private/university/<course>/` (copy `university/_template/`). Current courses: CISM exam prep (career coach until 2026-10-28), then Finance for Business and TESU BSBA finance / CLEP. Study blocks go through the normal approval flow; the wellbeing coach watches total load.
 
 To add a role: copy `.claude/agents/_template.md`, rename it and add a row here.
 
