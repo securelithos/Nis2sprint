@@ -35,6 +35,7 @@ Allan stops being the first domino and the bottleneck. Agents know the goal, hav
 | 25 | **Wispr Flow** for dictation everywhere (diary, inbox mails, chat) | Speak, don't type | Allan tests (T57) | idea |
 | 26 | **Claude in Slack or Remote Control** for a real "Loop Alley" and for driving a session on Allan's own computer (`claude remote-control`, Claude Desktop) | Ask the company from anywhere; reach local files | After GitHub and Drive are sorted | idea |
 | 27 | **Usage playbook** (`playbook/usage-tips.md`): rules to stay under limits, rated and applied | Lower cost, fewer limit hits | Live | live |
+| 28 | **Principles library**: books summarised in NotebookLM become decision filters (cards with source, limits, filter question, owner); first book: The Millionaire Next Door | Borrow proven beliefs as filters, not dogma | `private/principles/README.md` with 5 starter cards | building |
 | 10 | Personality test result in the knowledge base | Agents read context correctly, fewer misreadings | Allan sends the result | idea |
 
 ## Org chart draft (idea 1)
