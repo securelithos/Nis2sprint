@@ -86,6 +86,7 @@ How the company remembers: `memory/README.md` (working memory, short-term, long-
 - `/retro`: weekly team retrospective (Sunday weekly review): results, where Allan was the bottleneck, proposals.
 - Ideas and org design: `roadmap.md`. Idea Lab (startup ideas pipeline, owner: Chief Dreaming Officer **Kanye**): `private/ideas/inbox.md`. Governance (processes, owners, risks, BCP, incidents): `private/governance/isms-lite.md`. Friction (what slowed us down): `private/friction-log.md`.
 - `/start`: boots a fresh session. If `private/` is missing it is restored from the Claude Doc backup, then the proactive pass runs. Run it first in every new session.
+- **Token rule at start:** load `private/INDEX.md` first, then only the files the topic needs. No images, no full backup reads.
 - Start of a session: read this file, then `private/tasks/board.md`, `private/goals.md` and the profiles the request needs.
 
 ## Task board
