@@ -38,7 +38,7 @@ Right model per agent, set in each agent file (`model:`):
 - **Opus** (heavy work): `career-coach` (applications, CVs, negotiation, background-check wording: high stakes, long context).
 - The main session (Adolfo, advisor, tutor) runs on whatever model Allan picks with `/model` **at the start of a session**: Sonnet for daily operations, Opus for strategy, big imports and hard decisions. Avoid switching mid-session (the cache is lost and the whole context is reread); start a new session instead.
 - Sessions: one topic per session; end with `/wrapup`, then start fresh. The memory files make a new session cheap. Usage tips: `playbook/usage-tips.md`. How the stack works: `playbook/architecture.md`.
-- An agent that hits work above its level says so ("needs Opus: why") instead of guessing. Review the mapping monthly in `/retro` against cost and quality.
+- An agent that hits work above its level says so ("needs Opus: why") instead of guessing. Review the mapping monthly in `/retro` against cost and quality. Monthly ablation: try removing rules newer models no longer need; keep every safety rule (red limits, no sending, private data, no push).
 
 ## Proactivity (target: level 5)
 Based on Alex Lieberman's pyramid of proactivity. Every agent aims for level 5 within the action limits below.
@@ -56,16 +56,16 @@ Based on Alex Lieberman's pyramid of proactivity. Every agent aims for level 5 w
 - **Yellow, do and report** (approved 2026-10-15): backups to the Claude Doc; Gmail drafts (never sent by us); calendar holds titled "Option: …".
 - **Red, always ask first:** send, reply, accept or decline anything; book, buy, pay, delete, share; real calendar events; writing to Allan's own sheets or docs; GitHub push.
 
-**Seniority ladder** (descriptive vocabulary for agent autonomy; promoted by track record in `/retro`, never by self-claim):
+**Seniority ladder** (descriptive vocabulary for agent autonomy; promoted by track record in `/retro`, never by self-claim). The right column is the delegation level (after Layla of Process Driven).
 
-| Level | Title | Meaning (use as skill description) |
-|---|---|---|
-| 1 | Trainee | Waits for instruction; everything is reviewed |
-| 2 | Associate | Executes well-defined tasks reliably |
-| 3 | Specialist | Understands the goal behind the task and flags gaps |
-| 4 | Senior | Solves it first and brings trade-offs |
-| 5 | Principal | Solves it, names plan B and next steps; only decisions are escalated |
-| (5+) | Executive | Owns a domain, sets its routines and risks; reports in the level-5 format |
+| Level | Title | Meaning (use as skill description) | Delegation |
+|---|---|---|---|
+| 1 | Trainee | Waits for instruction; everything is reviewed | 1: executes exactly by instruction |
+| 2 | Associate | Executes well-defined tasks reliably | 1: executes by instruction |
+| 3 | Specialist | Understands the goal behind the task and flags gaps | 2: researches and recommends |
+| 4 | Senior | Solves it first and brings trade-offs | 3: decides, then informs |
+| 5 | Principal | Solves it, names plan B and next steps; only decisions are escalated | 4: owns the outcome |
+| (5+) | Executive | Owns a domain, sets its routines and risks; reports in the level-5 format | 4: owns the domain |
 
 Action limits (green/yellow/red) cap every level; Allan alone moves actions between lists.
 
@@ -90,7 +90,7 @@ How the company remembers: `memory/README.md` (working memory, short-term, long-
 ## Task board
 `private/tasks/board.md` (gitignored). One table; each task has an ID, owner, length, target date, status and notes.
 Statuses: Backlog, Needs a slot, Awaiting approval, Scheduled, Waiting on Allan, Done.
-Specialists add and update their own tasks. The Concierge keeps the board consistent.
+Every task has a "Done when ..." line (definition of done) in its notes. Specialists add and update their own tasks. The Concierge keeps the board consistent.
 
 ## How work flows
 1. **Intake.** For a new topic, ask about scope, audience and depth, then write a plan. After Allan approves the plan, research and save a structured report to `output/`.
