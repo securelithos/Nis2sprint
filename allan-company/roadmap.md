@@ -20,16 +20,18 @@ Allan stops being the first domino and the bottleneck. Agents know the goal, hav
 | 9 | **Weekly retro with the whole team** (`/retro`) | Optimise processes together; find where Allan is the bottleneck | Skill added; run in the Sunday weekly review | building |
 | 11 | **Friction watcher** (like Allie's "Toby" under the Chief of Staff): watches the workforce work and logs friction, repeated questions and missing access in `private/friction-log.md`; feeds `/retro` | Shows where the system, not Allan, is the bottleneck | Adolfo logs friction from today on | building |
 | 12 | **Directors per domain with named agents** (Allie: 6 directors, 34 agents, Chief Dreaming Officer "Phoebe" who asks of every output: how do we 10x it?) | Scale without cost; one owner per domain | Name directors when the org chart is decided | idea |
+| 13 | **Phone integration**: reminders and nudges on the phone (calendar alerts, later Telegram or similar) | Tools reach Allan where he is | After GitHub and Drive are sorted | idea |
+| 14 | **ISMS-lite for the company**: process register with owners, asset inventory, risk register, BIA, BCP, incident response, audit | Run the company like a well-governed organisation | Skeleton in `private/governance/isms-lite.md` | building |
 | 10 | Personality test result in the knowledge base | Agents read context correctly, fewer misreadings | Allan sends the result | idea |
 
 ## Org chart draft (idea 1)
 
 - **CEO: Allan**
 - **Chief of Staff / Concierge: Adolfo**: routing, approvals, memory, proactive pass
-- **Chief Health Officer**: health coach; under it nutrition, training, mobility and sleep
+- **Chief Health Officer: Josef**: health coach; under it nutrition, training, mobility and sleep
 - **Chief Wellbeing Officer**: wellbeing coach
 - **Chief Career Officer**: career coach (applications, interviews, career strategy)
-- **Chief Learning Officer / Dean**: Allan University (advisor, tutor, librarian, critic, roommate)
+- **Chief Learning Officer / Dean: Mao**: Allan University (advisor, tutor, librarian, critic, roommate)
 - **Chief Financial Officer**: budget, credit repair, FIRE plan (to come with the finance import)
 - **Chief Information Officer / Editor**: morning brief, research
 - **Chief Dreaming Officer**: keeps the moonshots alive (UAE Director, EUR 500k, FIRE), connects today's tasks to them, questions small thinking
