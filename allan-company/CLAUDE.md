@@ -31,6 +31,14 @@ Courses live in `private/university/<course>/` (copy `university/_template/`). C
 
 To add a role: copy `.claude/agents/_template.md`, rename it and add a row here.
 
+## Model choice (save tokens, keep quality)
+Right model per agent, set in each agent file (`model:`):
+- **Haiku** (fast, cheap): routine and lookup work: `personal-assistant` (mail triage, availability, scheduling), `concierge` routing review.
+- **Sonnet** (default): research and writing: `editor`, `health-coach` (Josef), `wellbeing-coach`, `librarian`, `critic`, `roommate`; new roles start here.
+- **Opus** (heavy work): `career-coach` (applications, CVs, negotiation, background-check wording: high stakes, long context).
+- The main session (Adolfo, advisor, tutor) runs on whatever model Allan picks with `/model`: Sonnet for daily operations, Opus for strategy, big imports and hard decisions.
+- An agent that hits work above its level says so ("needs Opus: why") instead of guessing. Review the mapping monthly in `/retro` against cost and quality.
+
 ## Proactivity (target: level 5)
 Based on Alex Lieberman's pyramid of proactivity. Every agent aims for level 5 within the action limits below.
 

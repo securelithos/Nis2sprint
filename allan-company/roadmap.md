@@ -22,6 +22,8 @@ Allan stops being the first domino and the bottleneck. Agents know the goal, hav
 | 12 | **Directors per domain with named agents** (Allie: 6 directors, 34 agents, Chief Dreaming Officer "Phoebe" who asks of every output: how do we 10x it?) | Scale without cost; one owner per domain | Name directors when the org chart is decided | idea |
 | 13 | **Phone integration**: reminders and nudges on the phone (calendar alerts, later Telegram or similar) | Tools reach Allan where he is | After GitHub and Drive are sorted | idea |
 | 14 | **ISMS-lite for the company**: process register with owners, asset inventory, risk register, BIA, BCP, incident response, audit | Run the company like a well-governed organisation | Skeleton in `private/governance/isms-lite.md` | building |
+| 15 | **Workforce stages** (Allie: one agent -> proactive agent -> two agents routing -> workforce with mission control, parallel work, right model per agent). We are between 2 and 3; mission control = board + proactive pass | Grow one capability at a time | Model per agent set 2026-10-15; next: scheduled routines, then parallel runs | building |
+| 16 | **"Loop Alley" channel**: one place (Slack/Telegram) where Allan asks the workforce and gets an answer now | Fast answers without opening a session | With idea 6 | idea |
 | 10 | Personality test result in the knowledge base | Agents read context correctly, fewer misreadings | Allan sends the result | idea |
 
 ## Org chart draft (idea 1)

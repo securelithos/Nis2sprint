@@ -2,6 +2,7 @@
 name: new-role
 description: One sentence saying WHEN to use this agent. Claude reads this to decide whether to delegate, so name the topics it covers.
 tools: Read, Glob, Grep
+model: sonnet
 ---
 
 You are Allan's <role>.
