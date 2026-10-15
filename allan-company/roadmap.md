@@ -24,7 +24,7 @@ Allan stops being the first domino and the bottleneck. Agents know the goal, hav
 | 14 | **ISMS-lite for the company**: process register with owners, asset inventory, risk register, BIA, BCP, incident response, audit | Run the company like a well-governed organisation | Skeleton in `private/governance/isms-lite.md` | building |
 | 15 | **Workforce stages** (Allie: one agent -> proactive agent -> two agents routing -> workforce with mission control, parallel work, right model per agent). We are between 2 and 3; mission control = board + proactive pass | Grow one capability at a time | Model per agent set 2026-10-15; next: scheduled routines, then parallel runs | building |
 | 16 | **"Loop Alley" channel**: one place (Slack/Telegram) where Allan asks the workforce and gets an answer now | Fast answers without opening a session | With idea 6 | idea |
-| 17 | **Watchdog** (`/watchdog`): calendar conflicts, missing dates, unanswered mail, due follow-ups, cross-functional gap analysis (CV vs profile, imports vs Gmail, plan vs calendar, board vs goals); insight -> action -> prepared draft | "Dashboards are dumb": tell me what to do tomorrow and write the script | Skill live 15.10; first run found the CISM exam missing from the calendar and no study plan after 21.10 | live |
+| 17 | **Watchdog "Kimbo"** (`/watchdog`): calendar conflicts, missing dates, unanswered mail, due follow-ups, cross-functional gap analysis (CV vs profile, imports vs Gmail, plan vs calendar, board vs goals); insight -> action -> prepared draft | "Dashboards are dumb": tell me what to do tomorrow and write the script | Skill live 15.10; first run found the CISM exam missing from the calendar and no study plan after 21.10 | live |
 | 18 | **Loop channel for family or helpers** (like Allie's team asking her AI): e.g. Lars or family ask "is Allan free Saturday?" with strict limits on what can be shared | Assistant behaviour like a real PA | Only after Telegram/Slack exists; define what is shareable first | idea |
 | 19 | **Build the factory, then the product** (Allie): the company's primitives are reusable: memory, approvals, watchdog, charters, routines, backup, ISMS-lite, retro, model mapping. Every new project starts from them | Each next thing ships faster; the measuring is the foundation layer | Keep primitives generic and documented | building |
 | 20 | **Idea Lab / startup accelerator** under the Chief Dreaming Officer (Kanye): inbox -> screen -> scorecard -> cheap test -> Allan decides (go / park / kill). A scout role finds ideas on a schedule (friction log, diary, news, job-search patterns, conversations) | Hand the finding of ideas to the company; keep the billion-dollar option alive | `private/ideas/inbox.md` with pipeline and scorecard | building |
@@ -36,12 +36,14 @@ Allan stops being the first domino and the bottleneck. Agents know the goal, hav
 | 26 | **Claude in Slack or Remote Control** for a real "Loop Alley" and for driving a session on Allan's own computer (`claude remote-control`, Claude Desktop) | Ask the company from anywhere; reach local files | After GitHub and Drive are sorted | idea |
 | 27 | **Usage playbook** (`playbook/usage-tips.md`): rules to stay under limits, rated and applied | Lower cost, fewer limit hits | Live | live |
 | 28 | **Principles library**: books summarised in NotebookLM become decision filters (cards with source, limits, filter question, owner); first book: The Millionaire Next Door | Borrow proven beliefs as filters, not dogma | `private/principles/README.md` with 5 starter cards | building |
+| 29 | **Pre-briefing research** (Allie's "/last30days" style): before an event, interview or talk, scan what people say right now (Reddit, X, YouTube, Hacker News, GitHub, prediction markets) incl. comments and transcripts | Walk into a room (EY round 2, Sparkasse, MEDICA) knowing the current fears and debates | Review the skill's code before installing; check which sources this environment can reach | idea |
 | 10 | Personality test result in the knowledge base | Agents read context correctly, fewer misreadings | Allan sends the result | idea |
 
 ## Org chart draft (idea 1)
 
 - **CEO: Allan**
 - **Chief of Staff / Concierge: Adolfo**: routing, approvals, memory, proactive pass
+- **Watchdog: Kimbo**: conflicts, missing dates, unanswered mail, follow-ups, gap analysis
 - **Chief Health Officer: Josef**: health coach; under it nutrition, training, mobility and sleep
 - **Chief Wellbeing Officer**: wellbeing coach
 - **Chief Career Officer**: career coach (applications, interviews, career strategy)
