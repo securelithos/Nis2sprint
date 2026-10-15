@@ -111,6 +111,36 @@ h1 {
 .swatch.ceo { border-color: var(--rose); }
 .foot { text-align: center; margin: 22px 0 0; font-family: var(--serif); font-style: italic; color: var(--muted); font-size: 16px; }
 
+
+.flow { margin-top: 72px; padding-top: 40px; border-top: 1px solid var(--line); }
+.flow-title { font-family: var(--display); font-weight: 300; font-size: clamp(22px, 4vw, 34px); letter-spacing: 0.16em; text-transform: uppercase; text-align: center; margin: 0; text-wrap: balance; }
+.flow .deck { text-align: center; }
+figure { margin: 28px 0 0; }
+.scroll { overflow-x: auto; border: 1px solid var(--line); background: var(--surface); padding: 14px; }
+.scroll svg { display: block; width: 100%; min-width: 900px; height: auto; }
+.d-box { fill: var(--surface); stroke: var(--line); stroke-width: 1; }
+.d-lead { stroke: var(--blue); }
+.d-ceo { stroke: var(--rose); stroke-width: 1.4; }
+.d-plan { fill: none; stroke: var(--muted); stroke-dasharray: 5 4; }
+.d-zone { fill: none; stroke: var(--muted); stroke-dasharray: 3 5; }
+.d-band { fill: var(--mist); stroke: var(--line); }
+.t-role { font-family: var(--display); font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; fill: var(--muted); }
+.t-name { font-family: var(--display); font-size: 14px; letter-spacing: 0.03em; fill: var(--ink); }
+.t-small { font-family: var(--body); font-size: 11px; fill: var(--muted); }
+.l-cmd { fill: none; stroke: var(--blue); stroke-width: 1.3; }
+.l-rep { fill: none; stroke: var(--muted); stroke-width: 1.2; stroke-dasharray: 6 4; }
+.l-info { fill: none; stroke: var(--muted); stroke-width: 1.4; stroke-dasharray: 1.5 4; stroke-linecap: round; }
+.mk { fill: var(--blue); }
+figcaption { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 10px 28px; justify-content: center; font-family: var(--display); font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+.key { display: inline-flex; align-items: center; gap: 10px; }
+.key i { display: inline-block; width: 30px; height: 0; border-top: 1.5px solid var(--blue); }
+.key .k-rep { border-top: 1.5px dashed var(--muted); }
+.key .k-info { border-top: 2px dotted var(--muted); }
+.rules { margin-top: 32px; display: grid; gap: 0 32px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+.rules article { padding: 14px 0; border-top: 1px solid var(--line); min-width: 0; }
+.rules h3 { font-family: var(--display); font-weight: 400; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blue); margin: 0 0 4px; }
+.rules p { margin: 0; color: var(--ink); }
+
 @media (max-width: 520px) {
   .card.ceo { padding: 20px 24px; }
   .card.lead { padding: 16px 20px; }
@@ -245,6 +275,107 @@ h1 {
       </div>
     </div>
   </section>
+
+  <section class="flow" aria-labelledby="flow-title">
+  <h2 id="flow-title" class="flow-title">Weisung und Informationsfluss</h2>
+  <p class="deck">Wer wem etwas auftragen darf, wer woran berichtet, und wo Wissen zusammenläuft.</p>
+  <figure>
+    <div class="scroll">
+      <svg viewBox="0 0 980 600" role="img" aria-label="Organigramm: Allan beauftragt Adolfo, Adolfo beauftragt alle Ressorts. Kimbo berichtet unabhängig direkt an Allan. Das Idea Lab steht als Forschung und Entwicklung außerhalb der Linie und schlägt nur vor. Alle Rollen teilen ein gemeinsames Gedächtnis.">
+        <defs><marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" class="mk"/></marker></defs>
+<path class="l-cmd" d="M490 70 V118" marker-end="url(#arr)"/>
+<text class="t-small" x="500" y="98">Weisung</text>
+<path class="l-cmd" d="M490 170 V220"/>
+<path class="l-cmd" d="M68.0 220 H908.0"/>
+<path class="l-cmd" d="M68.0 220 V268" marker-end="url(#arr)"/>
+<path class="l-cmd" d="M188.0 220 V268" marker-end="url(#arr)"/>
+<path class="l-cmd" d="M308.0 220 V268" marker-end="url(#arr)"/>
+<path class="l-cmd" d="M428.0 220 V268" marker-end="url(#arr)"/>
+<path class="l-cmd" d="M548.0 220 V268" marker-end="url(#arr)"/>
+<path class="l-cmd" d="M668.0 220 V268" marker-end="url(#arr)"/>
+<path class="l-cmd" d="M788.0 220 V268" marker-end="url(#arr)"/>
+<path class="l-cmd" d="M908.0 220 V268" marker-end="url(#arr)"/>
+<text class="t-small" x="500" y="212">Aufträge laufen über Adolfo</text>
+<path class="l-rep" d="M125 120 V45 H388"/>
+<text class="t-small" x="135" y="38">berichtet direkt an Allan</text>
+<path class="l-info" d="M210 148 H388"/>
+<text class="t-small" x="262" y="141">prüft</text>
+<rect class="d-zone" x="730" y="92" width="240" height="104" rx="2"/>
+<text class="t-role" x="746" y="110">R&amp;D · außerhalb der Linie</text>
+<path class="l-rep" d="M850 92 V45 H592"/>
+<text class="t-small" x="660" y="38">schlägt vor</text>
+<path class="l-info" d="M762 150 H592"/>
+<text class="t-small" x="600" y="143">nach Go: Aufgabe</text>
+<path class="l-cmd" d="M428.0 324 V470"/>
+<rect class="d-box d-lead" x="374" y="350" width="108" height="34" rx="2"/>
+<text class="t-name" x="428.0" y="372" text-anchor="middle">Librarian</text>
+<rect class="d-box d-lead" x="374" y="392" width="108" height="34" rx="2"/>
+<text class="t-name" x="428.0" y="414" text-anchor="middle">Critic</text>
+<rect class="d-box d-lead" x="374" y="434" width="108" height="34" rx="2"/>
+<text class="t-name" x="428.0" y="456" text-anchor="middle">Roommate</text>
+<rect class="d-box d-lead" x="14" y="270" width="108" height="54" rx="2"/>
+<text class="t-role" x="68.0" y="289" text-anchor="middle">Gesundheit</text>
+<text class="t-name" x="68.0" y="309" text-anchor="middle">Josef</text>
+<rect class="d-box d-lead" x="134" y="270" width="108" height="54" rx="2"/>
+<text class="t-role" x="188.0" y="289" text-anchor="middle">Wohlbefinden</text>
+<text class="t-name" x="188.0" y="309" text-anchor="middle">Wellbeing</text>
+<rect class="d-box d-lead" x="254" y="270" width="108" height="54" rx="2"/>
+<text class="t-role" x="308.0" y="289" text-anchor="middle">Karriere</text>
+<text class="t-name" x="308.0" y="309" text-anchor="middle">Career Coach</text>
+<rect class="d-box d-lead" x="374" y="270" width="108" height="54" rx="2"/>
+<text class="t-role" x="428.0" y="289" text-anchor="middle">University</text>
+<text class="t-name" x="428.0" y="309" text-anchor="middle">Mao</text>
+<rect class="d-box d-lead" x="494" y="270" width="108" height="54" rx="2"/>
+<text class="t-role" x="548.0" y="289" text-anchor="middle">Wissen</text>
+<text class="t-name" x="548.0" y="309" text-anchor="middle">Editor</text>
+<rect class="d-box d-lead" x="614" y="270" width="108" height="54" rx="2"/>
+<text class="t-role" x="668.0" y="289" text-anchor="middle">Betrieb</text>
+<text class="t-name" x="668.0" y="309" text-anchor="middle">Assistant</text>
+<rect class="d-box d-plan" x="734" y="270" width="108" height="54" rx="2"/>
+<text class="t-role" x="788.0" y="289" text-anchor="middle">Finanzen · geplant</text>
+<text class="t-name" x="788.0" y="309" text-anchor="middle">CFO</text>
+<rect class="d-box d-plan" x="854" y="270" width="108" height="54" rx="2"/>
+<text class="t-role" x="908.0" y="289" text-anchor="middle">Marke · geplant</text>
+<text class="t-name" x="908.0" y="309" text-anchor="middle">Marke &amp; Design</text>
+<rect class="d-box d-ceo" x="390" y="20" width="200" height="50" rx="2"/>
+<text class="t-role" x="490" y="39" text-anchor="middle" style="fill:var(--rose)">CEO</text><text class="t-name" x="490" y="58" text-anchor="middle">Allan</text>
+<rect class="d-box d-lead" x="390" y="120" width="200" height="50" rx="2"/>
+<text class="t-role" x="490" y="139" text-anchor="middle">Chief of Staff · Concierge</text><text class="t-name" x="490" y="158" text-anchor="middle">Adolfo</text>
+<rect class="d-box d-lead" x="40" y="120" width="170" height="50" rx="2"/>
+<text class="t-role" x="125" y="139" text-anchor="middle">Watchdog · unabhängig</text><text class="t-name" x="125" y="158" text-anchor="middle">Kimbo</text>
+<rect class="d-box d-lead" x="762" y="120" width="176" height="52" rx="2"/>
+<text class="t-role" x="850" y="139" text-anchor="middle">Chief Dreaming Officer</text><text class="t-name" x="850" y="159" text-anchor="middle">Kanye · Idea Lab</text>
+<path class="l-info" d="M122 297 H134"/>
+<text class="t-small" x="668.0" y="346" text-anchor="middle">alleiniger Zugang</text><text class="t-small" x="668.0" y="361" text-anchor="middle">Mail &amp; Kalender</text>
+<rect class="d-band" x="14" y="528" width="952" height="58" rx="2"/>
+<text class="t-role" x="490" y="552" text-anchor="middle">Gemeinsames Gedächtnis</text>
+<text class="t-small" x="490" y="572" text-anchor="middle">Board · memory · private · Aktionslog. Alle lesen und schreiben hier; Gelb und Rot wird protokolliert.</text>
+<path class="l-info" d="M114.0 324 V528"/>
+<path class="l-info" d="M234.0 324 V528"/>
+<path class="l-info" d="M354.0 324 V528"/>
+<path class="l-info" d="M474.0 470 V528"/>
+<path class="l-info" d="M594.0 324 V528"/>
+<path class="l-info" d="M834.0 324 V528"/>
+<path class="l-info" d="M954.0 324 V528"/>
+      </svg>
+    </div>
+    <figcaption>
+      <span class="key"><i class="k-cmd"></i>Weisung: darf Aufgaben erteilen</span>
+      <span class="key"><i class="k-rep"></i>Berichtslinie oder Vorschlag, ohne Weisungsrecht</span>
+      <span class="key"><i class="k-info"></i>Informationsfluss</span>
+    </figcaption>
+  </figure>
+  <div class="rules">
+    <article><h3>Allan</h3><p>Entscheidet alles. Gelb läuft nach seiner Freigabe vom 15.10., Rot erst nach seinem Ja.</p></article>
+    <article><h3>Adolfo</h3><p>Technisch der Einzige, der Agenten startet. Alle Aufträge laufen über ihn, er löst Konflikte und bringt Allan eine Freigabe-Liste.</p></article>
+    <article><h3>Ressortleiter</h3><p>Haben Fachhoheit in ihrem Bereich, aber kein Weisungsrecht untereinander. Wünsche gehen als Aufgabe aufs Board, Adolfo plant sie ein.</p></article>
+    <article><h3>Mao</h3><p>Führt Librarian, Critic und Roommate fachlich. Kurse und Meilensteine gehören ihm, die Termine entstehen über Adolfo und den Assistant.</p></article>
+    <article><h3>Kimbo</h3><p>Wie eine interne Revision: unabhängig, berichtet direkt an Allan, ändert nichts selbst und meldet nur.</p></article>
+    <article><h3>Kanye · Idea Lab</h3><p>Das Q-Labor des Hauses. Entwickelt und prüft Neues außerhalb der Linie, hat keine Weisungsbefugnis. Erst nach Allans Go wird aus einer Idee eine Aufgabe.</p></article>
+    <article><h3>Assistant</h3><p>Einziger Zugang zu Mail und Kalender. Legt nichts Verbindliches an ohne Freigabe.</p></article>
+    <article><h3>Josef und Wellbeing</h3><p>Tauschen Check-in-Notizen aus, wenn Stress, Schlaf oder Training einander beeinflussen. Adolfo gibt sie weiter.</p></article>
+  </div>
+</section>
 
   <div class="legend" role="list">
     <span role="listitem"><i class="swatch ceo"></i>CEO</span>
