@@ -27,3 +27,9 @@ Collected 2026-10-15 from a "22 rules" post. Rated by Adolfo: **use** = sensible
 | Save your one free reset for a bad day | check | Not verified; depends on the plan. |
 | Sunday = max day, limits reset at 5 pm | check | Not verified; reset times depend on the account. |
 | Send this to your team | - | |
+
+## How-to: get the gist of a long video without watching it
+1. **NotebookLM (best for keepers):** add the YouTube link as a source; ask for key points, a study guide or an audio overview. Works when the video has captions. Good for the principles library.
+2. **YouTube's own transcript:** under the video description, "Show transcript"; copy it and paste it to Adolfo for a summary.
+3. **Send the link to Adolfo** (chat or the +adolfo mail): Adolfo tries to fetch the captions and returns a summary in the level-5 style: the 5-10 key points, what matters for Allan's goals, what to do with it. If YouTube blocks the cloud, fall back to 1 or 2.
+Summaries only; no full transcripts are stored or passed on.
