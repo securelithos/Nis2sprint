@@ -17,3 +17,9 @@ description: Weekly team retrospective for Allan Company. Use when Allan says /r
 ## Promotion review (autonomy follows track record)
 Once a month, per agent: count corrections by Allan, wrong facts, missed items and actions that needed an undo. Zero or very few over four weeks: propose moving one action from yellow to green (or red to yellow). Repeated errors: propose tightening. Allan decides; log it in `private/decisions.md`.
 
+
+## Board meeting (weekly, as a file, not a live chat)
+Agents cannot talk to each other, so the "meeting" is a shared page. Each area contributes three lines to `private/governance/board-meeting.md`: what worked, what slowed us down, one proposal. Adolfo adds cross-links ("health's sleep note matters for university's study blocks", "assistant's slot rule helps career") and picks at most three proposals for Allan's yes. Keep it short: tokens are the cost.
+
+## Usage check
+Once a week note, in one line each: weekly usage level (from /usage or /cost), number of sessions, models used, and the single biggest consumer. Savings are estimated, never claimed to the token; the point is to spot waste early.

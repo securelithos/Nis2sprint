@@ -22,5 +22,15 @@ Frisur (Optionen): A) kurzer, sauber gestufter Taper mit weich strukturierter Ob
 Prompt:
 Editorial portrait photograph of Kimbo, a man in his early thirties, light brown skin, broad-shouldered rower and rugby player build, very calm and still, steady unblinking gaze with an almost unnerving composure, a quiet presence of a close-protection professional, faint stubble, short neatly tapered textured hair with a soft side part. Charcoal fine-gauge wool crewneck under a navy overshirt, plain dark watch, no logos, Ralph Lauren campaign elegance. [Haus-Stil] --ar 1:1
 
+## Mao, Chief Learning Officer / Dekan
+Eigenschaften: Südamerikaner, Mitte dreißig, Preppy-Bibliothekar mit Stil, der Aston Martin fährt und trotzdem den Bibliothekstyp behält: wach, belesen, leicht verschmitzt. Erkennungsmerkmal: Schildpatt-Brille, Notizbuch.
+Prompt:
+Editorial portrait photograph of Mao, a South American man in his mid-thirties, preppy librarian with quiet style, warm brown eyes, slightly tousled dark hair, tortoiseshell round glasses, a hint of dry humour in his expression. Navy blazer over a pale blue oxford shirt and a fine burgundy knit tie, a slim leather notebook in hand, subtly blurred wooden library shelves far behind him. [Haus-Stil] --ar 1:1
+
+## Josef, Chief Health Officer
+Eigenschaften: Schwarzer Arzt-Typ, Mitte/Ende dreißig, gesund und strahlend, Millionär-Ästhetik wie ein plastischer Chirurg, sieht man sofort, dass er elitär und ganz sicher ist. Die Haltung: gibt dem Valet 500 Euro, ohne es zu zeigen. Erkennungsmerkmal: schlichte Uhr mit dunklem Zifferblatt.
+Prompt:
+Editorial portrait photograph of Josef, a Black man in his late thirties, a luxury-clinic surgeon with an effortless, quietly self-assured presence, radiant healthy skin, immaculate short hair and trimmed beard, direct unhurried gaze, the faintest confident smile. Impeccably tailored charcoal suit, white open-collar shirt, plain dark-dial wrist watch, no logos, an understated air of wealth. [Haus-Stil] --ar 1:1
+
 ## Noch offen
-Josef (Gesundheit), Mao (University), Kanye (Idea Lab), Wellbeing, Career, Editor, CFO, Marke & Design, Librarian, Critic, Roommate.
+Kanye (Idea Lab), Wellbeing, Career, Editor, CFO, Marke & Design, Librarian, Critic, Roommate.
