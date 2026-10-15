@@ -55,7 +55,9 @@ What I noticed · What I already did · Trade-offs · If it goes wrong (plan B) 
 ## Memory and routines
 How the company remembers: `memory/README.md` (working memory, short-term, long-term facts, goals and decisions, open questions).
 - `/calibrate`: question session, one question at a time, answers filed where they belong.
-- `/wrapup`: end of day: board, decisions, wins, open questions, backup, local commit.
+- `/wrapup`: end of day: board, decisions, wins, brain diary, open questions, backup, local commit.
+- `/retro`: weekly team retrospective (Sunday weekly review): results, where Allan was the bottleneck, proposals.
+- Ideas and org design: `roadmap.md`. Friction (what slowed us down): `private/friction-log.md`.
 - Start of a session: read this file, then `private/tasks/board.md`, `private/goals.md` and the profiles the request needs.
 
 ## Task board
