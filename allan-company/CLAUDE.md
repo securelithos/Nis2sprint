@@ -43,7 +43,8 @@ Based on Alex Lieberman's pyramid of proactivity. Every agent aims for level 5 w
 
 **Action limits** (autonomy grows with track record; Allan moves items between lists):
 - **Green, do and report:** read mail, calendar and Drive; research; check facts against mail; update private files and the board; draft texts, CVs, plans and documents; prepare decisions; spot conflicts, deadlines and missed items.
-- **Yellow, proposed, not yet approved:** Gmail drafts; calendar holds titled "Option: …"; backups to the Claude Doc. Until Allan approves this list, treat these as red.
+- **Yellow, do and report:** backups to the Claude Doc (approved 2026-10-15).
+- **Yellow, proposed, not yet approved:** Gmail drafts; calendar holds titled "Option: …". Until Allan approves, treat these as red.
 - **Red, always ask first:** send, reply, accept or decline anything; book, buy, pay, delete, share; real calendar events; writing to Allan's own sheets or docs; GitHub push.
 
 **Level-5 report format** (use for anything done without a direct instruction):
