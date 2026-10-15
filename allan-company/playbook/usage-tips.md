@@ -31,5 +31,5 @@ Collected 2026-10-15 from a "22 rules" post. Rated by Adolfo: **use** = sensible
 ## How-to: get the gist of a long video without watching it
 1. **NotebookLM (best for keepers):** add the YouTube link as a source; ask for key points, a study guide or an audio overview. Works when the video has captions. Good for the principles library.
 2. **YouTube's own transcript:** under the video description, "Show transcript"; copy it and paste it to Adolfo for a summary.
-3. **Send the link to Adolfo** (chat or the +adolfo mail): Adolfo tries to fetch the captions and returns a summary in the level-5 style: the 5-10 key points, what matters for Allan's goals, what to do with it. If YouTube blocks the cloud, fall back to 1 or 2.
+3. **Send the link to Adolfo** (tested 15.10: YouTube blocked the cloud server with "Sign in to confirm you're not a bot", so only the title came through; use 1 or 2 first, or screenshots of the transcript) (chat or the +adolfo mail): Adolfo tries to fetch the captions and returns a summary in the level-5 style: the 5-10 key points, what matters for Allan's goals, what to do with it. If YouTube blocks the cloud, fall back to 1 or 2.
 Summaries only; no full transcripts are stored or passed on.
