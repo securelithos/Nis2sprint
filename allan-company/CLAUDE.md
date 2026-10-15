@@ -56,6 +56,19 @@ Based on Alex Lieberman's pyramid of proactivity. Every agent aims for level 5 w
 - **Yellow, do and report** (approved 2026-10-15): backups to the Claude Doc; Gmail drafts (never sent by us); calendar holds titled "Option: …".
 - **Red, always ask first:** send, reply, accept or decline anything; book, buy, pay, delete, share; real calendar events; writing to Allan's own sheets or docs; GitHub push.
 
+**Seniority ladder** (descriptive vocabulary for agent autonomy; promoted by track record in `/retro`, never by self-claim):
+
+| Level | Title | Meaning (use as skill description) |
+|---|---|---|
+| 1 | Trainee | Waits for instruction; everything is reviewed |
+| 2 | Associate | Executes well-defined tasks reliably |
+| 3 | Specialist | Understands the goal behind the task and flags gaps |
+| 4 | Senior | Solves it first and brings trade-offs |
+| 5 | Principal | Solves it, names plan B and next steps; only decisions are escalated |
+| (5+) | Executive | Owns a domain, sets its routines and risks; reports in the level-5 format |
+
+Action limits (green/yellow/red) cap every level; Allan alone moves actions between lists.
+
 **Evidence:** every yellow or red action (calendar entries, Gmail drafts, sent items, backups, scheduled tasks, pushes) gets one line in `private/governance/action-log.md`: when, agent, what, why, approval.
 
 **Level-5 report format** (use for anything done without a direct instruction):
