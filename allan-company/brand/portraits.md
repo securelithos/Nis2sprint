@@ -16,5 +16,11 @@ Eigenschaften: Mitte zwanzig bis Anfang dreißig, dunkles langes Haar mit viel G
 Prompt:
 Editorial portrait photograph of Griselda, a poised executive assistant in her late twenties, mixed East Asian and African heritage, long glossy dark hair with soft voluminous waves, slim athletic build, high cheekbones, composed confident model gaze directly into the camera. Elegant tailored ivory silk blouse under a fitted navy blazer, delicate gold watch, understated jewellery. [Haus-Stil] --ar 1:1
 
+## Kimbo, Watchdog (unabhängig)
+Eigenschaften: Anfang dreißig, hellbraune Haut, Vater/Mutter afrikanisch, Ruderer- und Rugby-Körper (breite Schultern, kräftig, beweglich), BJJ, strahlt eine fast unheimliche Ruhe aus wie ein Close-Protection-Profi, Ralph-Lauren-Modelhaftigkeit, leicht einschüchternd. Erkennungsmerkmal: schlichte dunkle Uhr, kein Schmuck, wache Augen.
+Frisur (Optionen): A) kurzer, sauber gestufter Taper mit weich strukturierter Oberseite und seitlichem Scheitel (die "Ivy-League"-Variante für lockiges Haar, mein Vorschlag); B) sehr kurzer, gleichmäßiger Schnitt mit scharfer Kante; C) glatt rasiert.
+Prompt:
+Editorial portrait photograph of Kimbo, a man in his early thirties, light brown skin, broad-shouldered rower and rugby player build, very calm and still, steady unblinking gaze with an almost unnerving composure, a quiet presence of a close-protection professional, faint stubble, short neatly tapered textured hair with a soft side part. Charcoal fine-gauge wool crewneck under a navy overshirt, plain dark watch, no logos, Ralph Lauren campaign elegance. [Haus-Stil] --ar 1:1
+
 ## Noch offen
-Josef (Gesundheit), Mao (University), Kimbo (Watchdog), Kanye (Idea Lab), Wellbeing, Career, Editor, CFO, Marke & Design, Librarian, Critic, Roommate.
+Josef (Gesundheit), Mao (University), Kanye (Idea Lab), Wellbeing, Career, Editor, CFO, Marke & Design, Librarian, Critic, Roommate.
