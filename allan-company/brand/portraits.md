@@ -41,7 +41,17 @@ Editorial portrait photograph of Kanye, a British-Indian inventor-designer in hi
 Das kühle Blaugrau mit Fensterlicht und Vorhang bleibt bei allen gleich (Wiedererkennung). Mao und Josef dürfen davor oder in einem Holz- und Ledersessel-Raum stehen, solange Licht und Blauton gleich bleiben.
 
 ## Ideen für spätere Rollen
-Altersmix: mindestens eine Person ab fünfzig (zum Beispiel Career Officer oder Editor), als Gegengewicht zu den jüngeren.
+Altersmix: Wolfgang (54) und Medusa (50+) sind das Gegengewicht zu den Jüngeren.
+
+## Wolfgang, Career Officer
+Eigenschaften: 54, elitärer, etwas aus der Form gekommener Privatbanker-Typ aus Hamburg, zurückgekämmtes Haar (slick back) mit Norwood-3-Geheimratsecken, schwer und behaglich statt durchtrainiert, kennt Geld, Titel und Türen. Erkennungsmerkmal: Siegelring, Weinglas-Gelassenheit.
+Prompt:
+Editorial portrait photograph of Wolfgang, a 54-year-old private banker from Hamburg, comfortably heavyset, slicked-back greying hair with a receding hairline, ruddy cultured face, shrewd amused eyes, composed and faintly imperious. Navy chalk-stripe three-piece suit, pale blue shirt with white collar, silk tie, signet ring, discreet gold cufflinks, no logos. [Haus-Stil] --ar 1:1
+
+## Medusa, Editor / CIO
+Eigenschaften: Anfang bis Mitte fünfzig, Chefredakteurin mit scharfem Blick, ruhig, ironisch, unbestechlich; eindrucksvolles Haar. Vorschlag: mediterrane Herkunft (griechisch), wegen des Namens. Erkennungsmerkmal: rote Korrekturstifte, Lesebrille an einer Kette.
+Prompt:
+Editorial portrait photograph of Medusa, a Greek editor-in-chief in her early fifties, striking swept-back dark hair with silver streaks falling in heavy waves, sharp intelligent eyes, a dry knowing half-smile, high cheekbones. Tailored charcoal blazer over a cream silk shirt, reading glasses on a fine chain, a red editing pencil in hand, no logos. [Haus-Stil] --ar 1:1
 
 ## Noch offen
-Kanye (Idea Lab), Wellbeing, Career, Editor, CFO, Marke & Design, Librarian, Critic, Roommate.
+Kanye (Idea Lab), Wellbeing, CFO, Marke & Design, Librarian, Critic, Roommate.

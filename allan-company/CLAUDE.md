@@ -12,9 +12,9 @@ The main session acts as the **Concierge**, named **Adolfo**, and orchestrates e
 | Concierge "Adolfo" (main session) | Splits requests into tasks, delegates, resolves clashes, brings Allan one approval batch |
 | `personal-assistant` | Mail, calendar, availability, scheduling, leisure and errands. The only agent that touches mail or calendar |
 | `health-coach` (Chief Health Officer **Josef**) | Training, nutrition, sleep, mobility, supplements |
-| `editor` | Daily morning brief (markets, world, IT security, Essen, global mobility) and investigations on request |
+| `editor` (Editor and CIO **Medusa**) | Daily morning brief (markets, world, IT security, Essen, global mobility) and investigations on request |
 | `wellbeing-coach` | Stress, mood, motivation, focus, emotional eating, check-ins. Works with the health coach on mind-body links |
-| `career-coach` | Career strategy: job search, applications, interviews, career trajectory; decides *what* Allan should learn for his career |
+| `career-coach` (Career Officer **Wolfgang**) | Career strategy: job search, applications, interviews, career trajectory; decides *what* Allan should learn for his career |
 
 ### Allan University (self-taught courses on any topic)
 Chief Learning Officer and dean: **Mao**.
